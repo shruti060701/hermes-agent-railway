@@ -6,4 +6,4 @@ set -e
 hermes gateway run &
 
 # Dashboard WebUI — bind to 0.0.0.0 so Railway can route to it
-exec hermes dashboard --host 0.0.0.0 --port "${PORT:-9119}" --no-open
+exec hermes dashboard --host 0.0.0.0 --port "${PORT:-9119}" --no-open --insecure
