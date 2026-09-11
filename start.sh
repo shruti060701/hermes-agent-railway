@@ -39,6 +39,10 @@ persist_or_generate HERMES_DASHBOARD_BASIC_AUTH_SECRET .dashboard_auth_secret -h
 
 echo "[hermes-agent-railway] Dashboard login — username: $HERMES_DASHBOARD_BASIC_AUTH_USERNAME  password: $HERMES_DASHBOARD_BASIC_AUTH_PASSWORD"
 echo "[hermes-agent-railway] To set your own, add HERMES_DASHBOARD_BASIC_AUTH_PASSWORD as a Railway variable."
+echo "[hermes-agent-railway] Fresh deploy — the agent has no LLM provider or messaging platform yet:"
+echo "[hermes-agent-railway]   -> Open the dashboard, then go to /models to set your LLM provider/API key"
+echo "[hermes-agent-railway]   -> Then go to /channels to connect Telegram, Discord, Slack, etc."
+echo "[hermes-agent-railway] The gateway warnings below (no platforms/allowlists configured) are expected until you do."
 
 # Gateway handles messaging channels (Telegram, Discord, etc.)
 hermes gateway run &
